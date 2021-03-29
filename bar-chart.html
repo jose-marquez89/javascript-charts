@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>A Bar Chart</title>
+    </head>
+    <body>
+        <H1>A Bar Chart For You</H1>
+        <div id="chart", style="width:600px;height:300px;"></div>
+        <!--[if lt IE 9]><script src="js/excanvas.min.js"></script><![endif]-->
+        <script>
+            var wins = [
+                [[2002, 13], [2004, 16], [2006, 6]]
+            ];
+            window.onload = function () {
+                Flotr.draw(
+                    document.getElementById("chart"),
+                    wins,
+                    {
+                        bars: {
+                            show: true
+                        },
+                        yaxis: {
+                            min: 0,
+                            tickDecimals: 0
+                        },
+                        xaxis: {
+                            tickDecimals: 0
+                        }
+
+                    }
+                );
+            };
+        </script>
+        <script src="js/flotr2.min.js"></script>
+    </body>
+</html>
